@@ -170,7 +170,8 @@ body {
     color: var(--secondary-color);
 }
 
-.footer-page .link {
+.footer-page .link,
+.footer-page .title-text {
     color: var(--secondary-color);
 }
 
