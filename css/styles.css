@@ -3,21 +3,20 @@
     --primary-text-color: #2E2F42;
     --title-text-color: #434455;
     --primary-color: #4D5AE5;
+    --primary-color-dark: #404BBF;
     --secondary-color: #E7E9FC;
     --bg-color: #F4F4FD;
-
-}
+    --bg-body: #ffffff;
+    }
 
 body {
-    background: var(--bg-color);
+    background: var(--bg-body);
     color: var(--primary-text-color);
-    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 0.02em;
-}
+    font-family: Roboto, sans-serif;
+    }
 
 .link {
     text-decoration: none;
-    color: var(--title-text-color);
 }
 
 .list {
@@ -30,6 +29,7 @@ body {
     font-family: Raleway, sans-serif;
     font-weight: 800;
     font-size: 18px;
+    color: var(--primary-text-color);
     line-height: 1.33;
     letter-spacing: 0.03em;
 }
@@ -38,61 +38,50 @@ body {
     color: var(--primary-color);
 }
 
-/* .link .logo:hover,
-.link .logo:focus {
-   font-weight: 900;
-   letter-spacing: 0.04;
-   color: var(--secondary-color);
-} */
-
 /* Site nav */
 
-.site-nav {
+.nav-link {
     font-weight: 500;
     font-size: 16px;
+    color: var(--primary-text-color);
     line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
-.site-nav .link {
-    color: var(--primary-text-color);
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--title-text-color);
 }
 
 .link.current {
     color: var(--primary-color);
 }
 
-.list .link:hover,
-.list .link:focus {
-    color: var(--primary-color);
-    font-weight: bold;
-    letter-spacing: 0.04;
-}
-
 /* Contacts in header */
 
 .header-contacts {
-    color: var(--title-text-color);
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
+    font-style: normal;
+    color: var(--title-text-color);
     line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
-.header-contacts .link:hover,
-.header-contacts .link:focus {
+.header-contacts:hover,
+.header-contacts:focus {
     color: var(--primary-color);
-    font-weight: bold;
-    letter-spacing: 0.04;
 }
 
 /* Hero */
 
 /* h1 */
 .hero-title {
-    color: #FFFFFF;
+    color: var(--bg-body);
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
+    letter-spacing: 0.02em;
 }
 
 .hero {
@@ -101,67 +90,66 @@ body {
 
 /* Button */
 .button {
+    font-family: Roboto, sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    border: 0;
+    letter-spacing: 0.04em;
+    color: var(--bg-body);
+    border: none;
     cursor: pointer;
 }
 
 .button.primary {
-    color: var(--secondary-color);
     background-color: var(--primary-color);
 }
 
-.button.secondary {
+.button.primary:focus,
+.button.primary:hover,
+.button.filter:focus,
+.button.filter:hover {
+    color: var(--bg-body);
+    background-color: var(--primary-color-dark);
+}   
+
+.button.filter {
     color: var(--primary-color);
     background-color: var(--secondary-color);
+
 }
 
-.button.secondary:focus,
-.button.secondary:hover {
-    color: var(--title-text-color);
-    background-color: var(--secondary-color);
-    font-weight: bold;
-    letter-spacing: 0.04;
-    border: 0;
-}
-
-.button.primary:focus,
-.button.primary:hover {
-    color: var(--title-text-color);
-    background-color: var(--secondary-color);
-    font-weight: bold;
-    letter-spacing: 0.04;
-    border: 0;
-}
 /* section */ 
 
 .section-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
+    letter-spacing: 0.02em;
 }
 
 .list-item {
     font-weight: 500;
     font-size: 20px;
+    color: var(--primary-text-color);
     line-height: 1.2;
+    letter-spacing: 0.02em;
 }
+
 
 /* p for text */
 .title-text {
     color: var(--title-text-color);
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
+    letter-spacing: 0.02em;
 }
 
-/* Filter category */
-.list .secondary.current {
-        color: var(--secondary-color);
-        background-color: var(--primary-color);
-        border: 0;
+.section-cards {
+    background-color: var(--bg-color);
+}
+
+.card-color {
+    background-color: var(--bg-body);
 }
 
 /* Footer */
@@ -176,6 +164,15 @@ body {
 }
 
 /* other */
-.hidden {
-    opacity: 0%;
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
